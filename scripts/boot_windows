@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo grub-reboot "Windows 7 (loader) (on /dev/sda1)"
+gnome-session-quit --reboot --no-prompt

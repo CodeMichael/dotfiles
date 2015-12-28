@@ -1,0 +1,28 @@
+#!/bin/bash
+
+RES=$(xrandr |grep DP-1 |awk '{print $4}'| cut -c 1-4)
+function wide() {
+  xrandr --output DP-1  --mode 2560x1080
+}
+function norm() {
+  xrandr --output DP-1  --mode 1920x1080
+}
+
+case $1 in
+  1920)
+    norm
+  ;;
+  2560)
+    wide
+  ;;
+  toggle)
+    if [ ${RES} = 2560 ]; then
+      norm
+    elif [ ${RES} = 1920 ]; then
+      wide
+    fi
+  ;;
+  *)
+    echo "options: 1920, 2560"
+  ;;
+esac

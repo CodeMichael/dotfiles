@@ -1,0 +1,11 @@
+#!/bin/bash
+xrandr --output DP-1 --mode 1920x1080 --primary
+steam steam://rungameid/105600
+sleep 10
+TPID=$(ps -ef|grep Terraria.bin.x86|grep -v grep| awk '{ print $2 }')
+echo "TPID==$TPID"
+echo "wait $TPID"
+PS=$(ps -ef|grep $TPID)
+echo "PS==$PS"
+while ps -p $TPID >/dev/null; do sleep 1; done
+xrandr --output DP-1 --auto
