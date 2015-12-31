@@ -1,0 +1,12 @@
+{
+  "filelist": {
+    "folders": {
+      "config": ".config",
+      "conky": ".conky",
+      "scripts": "scripts"
+    },
+    "files": {
+      "zshrc": ".zshrc"
+    }
+  }
+}
