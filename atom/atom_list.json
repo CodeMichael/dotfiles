@@ -1,0 +1,21 @@
+{
+  "packages": [
+    "vim-mode",
+    "nucleus-dark-ui",
+    "git-plus",
+    "linter",
+    "save-session",
+    "minimap",
+    "atom-material-syntax",
+    "merge-conflicts",
+    "linter-jslint",
+    "atom-monokai",
+    "set-syntax",
+    "jslint",
+    "language-ansible",
+    "color-picker",
+    "jshint",
+    "linter-pylint",
+    "atom-material-ui"
+  ]
+}

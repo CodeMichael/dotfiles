@@ -1,0 +1,33 @@
+"*":
+  editor:
+    fontSize: 16
+    invisibles: {}
+    preferredLineLength: 120
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    fontFamily: "Monoisome"
+  core:
+    themes: [
+      "nucleus-dark-ui"
+      "atom-material-syntax"
+    ]
+    autoHideMenuBar: true
+    projectHome: "/home/mbabler/Code"
+    disabledPackages: [
+      "jslint"
+      "linter-jslint"
+      "minimap"
+    ]
+  "exception-reporting":
+    userId: "488bd9f6-2470-e5ae-4bb8-e2a23a857875"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "2ad0ca96-f657-af3f-27a6-6aa26e0091e9"
+  "merge-conflicts": {}
+  "atom-material-ui":
+    accentColor: "Blue"
+  "vim-mode": {}
+  "save-session":
+    dataSaveFolder: "/home/mbabler/.atom/packages/save-session/projects"

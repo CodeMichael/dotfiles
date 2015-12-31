@@ -6,7 +6,8 @@
       "scripts": "scripts"
     },
     "files": {
-      "zshrc": ".zshrc"
+      "zshrc": ".zshrc",
+      "atom/config.cson": ".atom/config.cson" 
     }
   }
 }
