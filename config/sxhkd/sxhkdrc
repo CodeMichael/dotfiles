@@ -94,10 +94,10 @@ super + z
 	rofi -i -show ssh -lines 5 -eh 2 -width 100 -padding 800 -opacity 95 -bw 0 -bc black -bg black -fg darkgrey -hlbg black -hlfg white
 
 control + alt + l
-	~/bin/lock
+	~/scripts/lock
 
 control + alt + s
-	~/bin/screen toggle
+	~/scripts/screen_res toggle
 
 # make sxhkd reload its configuration files:
 super + Escape
