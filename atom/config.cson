@@ -6,7 +6,7 @@
     showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
-    fontFamily: "Monoisome"
+    fontFamily: "Monoid"
   core:
     themes: [
       "nucleus-dark-ui"
