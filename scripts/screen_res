@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RES=$(xrandr |grep DP-1 |awk '{print $4}'| cut -c 1-4)
+RES=$(xrandr |grep primary |awk '{print $4}'| cut -c 1-4)
 function wide() {
   xrandr --output DP-1  --mode 2560x1080
 }
