@@ -88,7 +88,8 @@ def atom_mod_list(conf, args):
     """get a list of installed atom packages"""
     path = conf['atom']['package_dir']
     pkg_list = os.listdir(path)
-    pkg_list.remove('README.md')
+    logging.info(pkg_list)
+    #pkg_list.remove('README.md')
     # make it a json object
     jlist = {'packages': pkg_list}
     logging.info(json.dumps(jlist, indent=2))
