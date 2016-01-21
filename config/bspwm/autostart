@@ -1,5 +1,5 @@
 xrandr --output DP-1 --auto --primary --output HDMI-0 --auto --above DP-1
-compton -r 7 -o .8 -l -7 -t -7 -cCfGb --vsync opengl
+compton -r 7 -o .8 -l -7 -t -7 -cCfGb --vsync opengl --backend glx
 dunst &
 tint2 -c ${HOME}/.config/tint2/tint2rc &
 conky --daemonize --quiet --config=${HOME}/.conky/horizontal_minimal.conf &
