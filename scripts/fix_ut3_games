@@ -6,21 +6,34 @@
 #
 #find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^PoolSize=[0-9]+/PoolSize=3000/g' {} \;
 
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^bUseTextureStreaming=\w+/bUseTextureStreaming=True/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^bUseBackgroundLevelStreaming=\w+/bUseBackgroundLevelStreaming=True/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^mipFadeInSpeed0=\d+/mipFadeInSpeed0=0/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^mipFadeOutSpeed0=\d+/mipFadeOutSpeed0=0/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^mipFadeInSpeed1=\d+/mipFadeInSpeed1=0/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^mipFadeOutSpeed1=\d+/mipFadeOutSpeed1=0/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^physXGpuHeapSize=\d+/physXGpuHeapSize=64/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^physXMeshCacheSize=\d+/physXMeshCacheSize=16/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^bSmoothFrameRate=\w+/bSmoothFrameRate=TRUE/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^minSmoothedFrameRate=\d+/minSmoothedFrameRate=30/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^maxSmoothedFrameRate=\d+/maxSmoothedFrameRate=400/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^bInitializeShadersOnDemand=\w+/bInitializeShadersOnDemand=True/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^disableATITextureFilterOptimizationChecks=\w+/disableATITextureFilterOptimizationChecks=False/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^useMinimalNVIDIADriverShaderOptimization=\w+/useMinimalNVIDIADriverShaderOptimization=False/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^poolSize=\d+/poolSize=768/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^bAllowMultiThreadedShaderCompile=\w+/bAllowMultiThreadedShaderCompile=True/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^threadedShaderCompileThreshold=\d+/threadedShaderCompileThreshold=4/g' {} \;
-find /mnt/steam/steamapps -type f -iname *.ini -exec sed -inr 's/^onlyStreamInTextures=\w+/onlyStreamInTextures=True/g' {} \;
+case $1 in
+  "")
+    echo "Provide a folder path where ut3 games are installed"
+    echo "use -d to default to /mnt/steam/steamapps"
+  ;;
+  "-d")
+    folder="/mnt/steam/steamapps"
+  ;;
+  *)
+    folder=$1
+  ;;
+esac
+
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^bUseTextureStreaming=\w+/bUseTextureStreaming=True/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^bUseBackgroundLevelStreaming=\w+/bUseBackgroundLevelStreaming=True/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^mipFadeInSpeed0=\d+/mipFadeInSpeed0=0/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^mipFadeOutSpeed0=\d+/mipFadeOutSpeed0=0/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^mipFadeInSpeed1=\d+/mipFadeInSpeed1=0/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^mipFadeOutSpeed1=\d+/mipFadeOutSpeed1=0/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^physXGpuHeapSize=\d+/physXGpuHeapSize=64/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^physXMeshCacheSize=\d+/physXMeshCacheSize=16/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^bSmoothFrameRate=\w+/bSmoothFrameRate=TRUE/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^minSmoothedFrameRate=\d+/minSmoothedFrameRate=30/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^maxSmoothedFrameRate=\d+/maxSmoothedFrameRate=400/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^bInitializeShadersOnDemand=\w+/bInitializeShadersOnDemand=True/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^disableATITextureFilterOptimizationChecks=\w+/disableATITextureFilterOptimizationChecks=False/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^useMinimalNVIDIADriverShaderOptimization=\w+/useMinimalNVIDIADriverShaderOptimization=False/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^poolSize=\d+/poolSize=768/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^bAllowMultiThreadedShaderCompile=\w+/bAllowMultiThreadedShaderCompile=True/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^threadedShaderCompileThreshold=\d+/threadedShaderCompileThreshold=4/g' {} \;
+find ${folder} -type f -iname *.ini -exec sed -inr 's/^onlyStreamInTextures=\w+/onlyStreamInTextures=True/g' {} \;
