@@ -11,5 +11,6 @@ bspc config focus_by_distance   true
 bspc monitor -d Game Web Steam Code Mail LE Cell
 #bspc monitor HDMI-0 -d Mon2
 
-bspc rule -a Steam desktop=^3 #fullscreen=on
-bspc rule -a Atom desktop=^4
+bspc rule -a Steam desktop=Steam #fullscreen=on
+bspc rule -a Atom desktop=Code
+bspc rule -a "Nylas N1" desktop=Mail

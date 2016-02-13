@@ -85,7 +85,7 @@ super + Return
 	terminator
 
 super + space
-	/usr/bin/rofi -show combi -switchers combi -combi-modi drun,run -i -terminal terminator -lines 5 -eh 2 -width 100 -padding 420 -opacity 85 -bw 0 -bc black -bg black -fg darkgrey -hlbg black -hlfg white
+	/usr/bin/rofi -show combi -switchers combi -combi-modi drun,run -i -terminal terminator -lines 5 -eh 2 -no-disable-history -width 100 -padding 420 -opacity 85 -bw 0 -bc black -bg black -fg darkgrey -hlbg black -hlfg white
 
 super + x
 	rofi -i -show window -lines 5 -eh 2 -width 100 -padding 800 -opacity 95 -bw 0 -bc black -bg black -fg darkgrey -hlbg black -hlfg white

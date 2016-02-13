@@ -9,3 +9,4 @@ synergy &
 steam &
 xscreensaver &
 x11vnc -display :0 -rfbauth ~/.x11psswd &
+nylas &
