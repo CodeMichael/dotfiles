@@ -1,5 +1,18 @@
 #! /bin/sh
 
+sxhkd &
+xrandr --output DP-1 --auto --primary --output HDMI-0 --auto --above DP-1
+compton -r 7 -o .8 -l -7 -t -7 -cCfG --vsync opengl --backend glx &
+dunst &
+tint2 -c ${HOME}/.config/tint2/tint2rc &
+conky --daemonize --quiet --config=${HOME}/.conky/horizontal_minimal.conf &
+nm-applet &
+dropbox &
+synergy &
+steam &
+xscreensaver &
+x11vnc -display :0 -rfbauth ~/.x11psswd &
+
 bspc config border_width        2
 bspc config window_gap          30
 
@@ -11,6 +24,5 @@ bspc config focus_by_distance   true
 bspc monitor -d Game Web Steam Code Mail LE Cell
 #bspc monitor HDMI-0 -d Mon2
 
-bspc rule -a Steam desktop=Steam #fullscreen=on
-bspc rule -a Atom desktop=Code
-bspc rule -a "Nylas N1" desktop=Mail
+bspc rule -a Steam desktop=^3 #fullscreen=on
+bspc rule -a Atom desktop=^4
